@@ -62,10 +62,37 @@ function checkSquare(board,row,col,val){
 	return true
 }
 
+//sums all above functions up
+function checkVal(board,row,col,val){
+	if(checkrow(board,row,val)&&
+		checkCol(board,col,val)&&
+		checkSquare(board,row,col,val)
+	){
+		return true
+	}
+	return false
+}
 
 
 
-
+//solve the sodoku
+function solve(board){
+	let emptySpot=findEmptySpot(board)
+	let row=emptySpot[0]
+	let col =emptySpot[1]
+	if(row===-1]{
+		return board;
+	}
+	for(let num=0;num<9;num++){
+		if(checkVal(board,row,col,num){
+			board[row][col]=num
+			solve(board)
+		}
+	}
+if(findEmptySpot(board)[0]===-1){
+	board[row][col]=0;
+}
+}
 
 
 
