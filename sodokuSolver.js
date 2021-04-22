@@ -64,7 +64,7 @@ function checkSquare(board,row,col,val){
 
 //sums all above functions up
 function checkVal(board,row,col,val){
-	if(checkrow(board,row,val)&&
+	if(checkRow(board,row,val)&&
 		checkCol(board,col,val)&&
 		checkSquare(board,row,col,val)
 	){
