@@ -51,7 +51,7 @@ function checkCol(board,col,val){
 
 function checkSquare(board,row,col,val){
 	boxRow=Math.floor(row/3)*3;
-	boxCol=math.floor(col/3)*3;
+	boxCol=Math.floor(col/3)*3;
 	for(let r=0;r<3;r++){
 		for(let c=0;c<3;c++){
 			if(board[boxRow+r][boxCol+c]===val){
